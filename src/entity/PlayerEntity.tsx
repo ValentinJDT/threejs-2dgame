@@ -22,7 +22,7 @@ const PlayerEntity: FC<PlayerEntityProps> = (props) => {
     setJumping(false);
   }
 
-  const [ref, api] = useBox(() => ({ mass: 1, position: [0, 5, 0], angularDamping: 1, fixedRotation: true, onCollide: onCol }));
+  const [ref, api] = useBox(() => ({ mass: 1, position: [0, 5, 0], angularDamping: 1, fixedRotation: true, onCollide: onCol, linearDamping: 0 }));
 
   const eventRegister = useEventRegister();
 
